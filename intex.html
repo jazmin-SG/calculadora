@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Física </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📐 CALCULADORA DE FÍSICA</h1>
+            <p>Física 1, 2 y 3 </p>
+        </header>
+
+        <div class="menu-principal">
+            <button class="btn-fisica" onclick="mostrarFisica(1)">📘 FÍSICA 1<br><small>Mecánica, Fluidos, Termo</small></button>
+            <button class="btn-fisica" onclick="mostrarFisica(2)">📗 FÍSICA 2<br><small>Ondas, Calor, Electricidad</small></button>
+            <button class="btn-fisica" onclick="mostrarFisica(3)">📕 FÍSICA 3<br><small>Electro, Óptica, Moderna</small></button>
+        </div>
+
+        <div id="mensaje-bienvenida" class="mensaje-bienvenida">
+            <p>Selecciona Física 1, 2 o 3 para ver los temas disponibles</p>
+        </div>
+
+        <!-- Contenedor de temas (oculto al inicio) -->
+        <div id="contenedor-temas" class="contenedor-temas oculto"></div>
+
+        <!-- Contenedor de calculadora (oculto al inicio) -->
+        <div id="calculadora-container" class="calculadora-container oculto">
+            <button class="btn-volver" onclick="volverALista()">← Volver a temas</button>
+            <div id="calculadora"></div>
+        </div>
+
+        <footer>
+            Calculadora de Física
+        </footer>
+    </div>
+ <script src="calculadora.js"></script>
+</body>
+</html>
