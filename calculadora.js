@@ -344,7 +344,6 @@
             `;
         }
 
-        // ==================== CALCULAR TEMA ====================
         function calcularTema(temaId) {
             const tema = temasActual.find(t => t.id === temaId);
             if (!tema) return;
@@ -364,7 +363,7 @@
                 if (campo.tipo === 'text') {
                     if (!input.value.trim()) {
                         hayError = true;
-                        mensajeError = `❌ El campo "${campo.nombre}" está vacío`;
+                        mensajeError = ` El campo "${campo.nombre}" está vacío`;
                         break;
                     }
                     valores[campo.id] = input.value;
@@ -375,7 +374,7 @@
                             valores[campo.id] = campo.defecto;
                         } else {
                             hayError = true;
-                            mensajeError = `❌ El campo "${campo.nombre}" debe ser un número válido`;
+                            mensajeError = ` El campo "${campo.nombre}" debe ser un número válido`;
                             break;
                         }
                     } else {
@@ -395,7 +394,7 @@
                 
                 if (typeof resultado === 'object' && resultado.hasOwnProperty('sumaEntran')) {
                     if (resultado.cumple) {
-                        resultadoDiv.innerHTML = `✅ <strong>LEY KCL CUMPLIDA</strong><br>Σ I<sub>entran</sub> = ${resultado.sumaEntran.toFixed(3)} A<br>Σ I<sub>salen</sub> = ${resultado.sumaSalen.toFixed(3)} A<br><span style="color: green;">✓ La suma de corrientes que entran es igual a las que salen</span>`;
+                        resultadoDiv.innerHTML = ` <strong>LEY KCL CUMPLIDA</strong><br>Σ I<sub>entran</sub> = ${resultado.sumaEntran.toFixed(3)} A<br>Σ I<sub>salen</sub> = ${resultado.sumaSalen.toFixed(3)} A<br><span style="color: green;">✓ La suma de corrientes que entran es igual a las que salen</span>`;
                     } else {
                         resultadoDiv.innerHTML = `❌ <strong>LEY KCL NO CUMPLIDA</strong><br>Σ I<sub>entran</sub> = ${resultado.sumaEntran.toFixed(3)} A<br>Σ I<sub>salen</sub> = ${resultado.sumaSalen.toFixed(3)} A<br><span style="color: red;">✗ Diferencia: ${Math.abs(resultado.sumaEntran - resultado.sumaSalen).toFixed(3)} A</span>`;
                     }
