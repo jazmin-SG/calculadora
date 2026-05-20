@@ -295,7 +295,7 @@
                 card.className = 'tema-card';
                 card.onclick = () => mostrarCalculadora(tema.id);
                 card.innerHTML = `
-                    <h3>📌 ${tema.nombre}</h3>
+                    <h3> ${tema.nombre}</h3>
                     <p>${tema.formula}</p>
                 `;
                 contenedor.appendChild(card);

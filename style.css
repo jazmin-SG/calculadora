@@ -246,7 +246,7 @@
 
         @media (max-width: 768px) {
             .container {
-                padding: 15px;
+                padding: 14px;
             }
             .btn-fisica {
                 padding: 10px 20px;
@@ -260,3 +260,4 @@
                 font-size: 24px;
             }
         }
+        
