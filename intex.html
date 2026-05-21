@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de Física </title>
+    <title>Calculadora de Física</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>📐 CALCULADORA DE FÍSICA</h1>
-            <p>Física I, II & III </p>
+            <p>Física I, II & III</p>
         </header>
 
         <div class="menu-principal">
@@ -20,9 +20,9 @@
         </div>
 
         <div id="mensaje-bienvenida" class="mensaje-bienvenida">
-            <p>Selecciona Física I, II o III para ver los temas disponibles</p>
         </div>
-        
+        <div id="contenedor-temas" class="contenedor-temas oculto"></div>
+
         <div id="calculadora-container" class="calculadora-container oculto">
             <button class="btn-volver" onclick="volverALista()">← Volver a temas</button>
             <div id="calculadora"></div>
@@ -31,7 +31,8 @@
         <footer>
             Calculadora de Física
         </footer>
-    </div> 
- <script src="calculadora.js"></script>
+    </div>
+
+    <script src="calculadora.js"></script>
 </body>
 </html>
